@@ -1,15 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.trabalhoestruturadados.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhoestruturadados.HelloController">
+  <tabs>
+    <Tab text="Cadastro Cliente">
+      <content>
+        <AnchorPane id="MenuCadastro" fx:id="MenuCadastro" minHeight="0.0" minWidth="0.0" prefHeight="274.0" prefWidth="555.0">
+               <children>
+                  <Label layoutX="23.0" layoutY="46.0" prefHeight="17.0" prefWidth="45.0" text="Nome" />
+                  <TextField fx:id="textNome" layoutX="81.0" layoutY="43.0" prefHeight="23.0" prefWidth="468.0" />
+                  <Label layoutX="357.0" layoutY="84.0" prefHeight="17.0" prefWidth="32.0" text="CNH" />
+                  <Label layoutX="23.0" layoutY="128.0" prefHeight="17.0" prefWidth="58.0" text="Telefone" />
+                  <Label layoutX="23.0" layoutY="84.0" prefHeight="17.0" prefWidth="45.0" text="CPF" />
+                  <TextField fx:id="textCPF" layoutX="84.0" layoutY="81.0" prefHeight="23.0" prefWidth="147.0" />
+                  <TextField fx:id="textTele" layoutX="84.0" layoutY="125.0" prefHeight="23.0" prefWidth="147.0" />
+                  <TextField fx:id="textCNh" layoutX="402.0" layoutY="81.0" prefHeight="23.0" prefWidth="147.0" />
+                  <Button fx:id="buttonCadastrarCliente" layoutX="356.0" layoutY="126.0" mnemonicParsing="false" onAction="#cadastrarButton" prefHeight="22.0" prefWidth="193.0" text="Cadastrar" textAlignment="CENTER" textFill="#0d05f5" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Cadastro Veículos">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </Tab>
+      <Tab text="Locações">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+         </content>
+      </Tab>
+      <Tab text="Devoluções">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+         </content>
+      </Tab>
+      <Tab text="Relatórios">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
